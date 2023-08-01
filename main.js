@@ -23,6 +23,23 @@ generateEl.addEventListener('click', () => {
     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbols, length);
 });
 
+clipboardEl.addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = resultEl.innerText;
+
+    if (!password) {
+        // alert('Password not found.');
+        return;
+    } else {
+        textarea.value = password;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        textarea.remove();
+        // alert('Password copied.');
+    };
+})
+
 function generatePassword(lower, upper, number, symbol, length) {
    let generatedPassword = '';
 
