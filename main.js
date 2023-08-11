@@ -6,6 +6,7 @@ const numberEl = document.getElementById('numbers');
 const symbolsEl = document.getElementById('symbols');
 const generateEl = document.getElementById('generate');
 const clipboardEl = document.getElementById('clipboard');
+const strengthEl = document.getElementById('strength');
 
 const randomFunc = {
     lower: getRandomLower,
@@ -21,6 +22,7 @@ generateEl.addEventListener('click', () => {
     const hasNumber = numberEl.checked;
     const hasSymbols = symbolsEl.checked;
     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbols, length);
+    strengthEl.innerHTML = testPassword(hasLower, hasUpper, hasNumber, hasSymbols, length);
 });
 
 clipboardEl.addEventListener('click', () => {
@@ -39,6 +41,19 @@ clipboardEl.addEventListener('click', () => {
         // alert('Password copied.');
     };
 })
+
+function testPassword(lower, upper, number, symbol, length) {
+    let finalStrength;
+    const typesCount = lower + upper + number + symbol;
+ 
+    if(typesCount == 0){ finalStrength = "Password Strength" };
+    if((typesCount > 0) && (typesCount <= 2)){ finalStrength = "Weak" };
+    if((typesCount > 0) && (length < 8)){ finalStrength = "Weak" };
+    if((typesCount >= 2) && (length > 8)){ finalStrength = "Medium" };
+    if((typesCount == 4) && (length > 12)){ finalStrength = "Strong" };
+    
+    return finalStrength;
+ };
 
 function generatePassword(lower, upper, number, symbol, length) {
    let generatedPassword = '';
