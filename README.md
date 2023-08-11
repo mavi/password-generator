@@ -1,7 +1,5 @@
 # @mavi/password-generator
 
-### 📝 To-Do
-
-- [x] Display of password strength.
-- [ ] Changes on index.
-- [x] Slider for password length.
+<a align="center" href="https://mavi.github.io/password-generator" target="_blank">  
+    <img src="example.png" href="" alt="Example image of Website." />
+</a>
