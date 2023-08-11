@@ -1,4 +1,4 @@
-# Mavi's Password Generator
+# @Mavi/Password-Generator
 
 ### 📝 To-Do
 
