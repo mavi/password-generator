@@ -22,7 +22,7 @@ generateEl.addEventListener('click', () => {
     const hasNumber = numberEl.checked;
     const hasSymbols = symbolsEl.checked;
     resultEl.innerText = generatePassword(hasLower, hasUpper, hasNumber, hasSymbols, length);
-    strengthEl.innerHTML = testPassword(hasLower, hasUpper, hasNumber, hasSymbols, length);
+    strengthEl.innerText = testPassword(hasLower, hasUpper, hasNumber, hasSymbols, length);
 });
 
 clipboardEl.addEventListener('click', () => {
