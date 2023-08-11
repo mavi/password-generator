@@ -4,4 +4,4 @@
 
 - [x] Display of password strength.
 - [ ] Changes on index.
-- [ ] Slider for password length.
+- [x] Slider for password length.
