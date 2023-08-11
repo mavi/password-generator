@@ -1,6 +1,4 @@
-# ❤️‍🔥 Mavi's Password Generator
- 
-- A random password generator with everything you need. 
+# Mavi's Password Generator
 
 ### 📝 To-Do
 
