@@ -115,10 +115,10 @@ input[type=checkbox] {
 
 .floating-btn {
 	border-radius: 26.5px;
-	background-color: #434242;
-	border: 1px solid #434242;
+	background-color: #F3EFE0;
+	border: 1px solid #F3EFE0;
 	box-shadow: 0 16px 22px -17px #000000;
-	color: #F3EFE0;
+	color: #222222;
 	cursor: pointer;
 	font-size: 16px;
 	line-height: 20px;
@@ -130,8 +130,8 @@ input[type=checkbox] {
 }
 
 .floating-btn:hover {
-	background-color: #F3EFE0;
-	color: #222222;
+	background-color: #434242;
+	color: #F3EFE0;
 }
 
 .floating-btn:focus {
@@ -153,10 +153,6 @@ input[type=checkbox] {
 }
 
 @media screen and (max-width: 480px) {
-
-	.social-panel-container.visible {
-		transform: translateX(0px);
-	}
 	
 	.floating-btn {
 		right: 10px;
